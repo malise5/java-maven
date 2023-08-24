@@ -34,6 +34,15 @@ public class Variables {
     LOGGER.info("Long minimum " + Long.MIN_VALUE);
     LOGGER.info("Long maximum " + Long.MAX_VALUE);
 
+    //?wrapper classes
+
+    byte aPrimitive =23;
+    Byte aWrapper =23;
+
+    LOGGER.info("byte primitive " + aPrimitive);
+    LOGGER.info("Byte wrapper " + aWrapper);
+
+
   }
 
   private void floatTypes(){
