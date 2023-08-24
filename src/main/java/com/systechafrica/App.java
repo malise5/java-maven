@@ -22,4 +22,9 @@ public class App
     public boolean positiveNumber(int a){
         return a >= 0;
     }
+
+    //?Area of a circle
+    public double areOfCircle(double radius){
+        return Math.PI *radius * radius;
+    }
 }

@@ -44,4 +44,13 @@ public class AppTest {
 
         Assertions.assertEquals(expected, result, "a is a positive number");
     }
+
+    //?check area of a circle
+    @Test 
+    void testAreaOfCircle(){
+        double result = app.areOfCircle(10);
+        double expected = 314.1592653589793;
+
+        Assertions.assertEquals(expected, result, "Area of a circle should be 7");
+    }
 }
