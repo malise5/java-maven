@@ -57,9 +57,6 @@ public class AppTest {
     //?checks if it throws an error
     @Test
     void testDivide(){
-        // int expected = 12;
-        // int result = app.divide(1, 0);
-
         Assertions.assertThrows(ArithmeticException.class, () -> app.divide(1, 0), "Divide By Zero Should Throw");
     }
 }
