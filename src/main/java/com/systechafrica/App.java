@@ -27,4 +27,9 @@ public class App
     public double areOfCircle(double radius){
         return Math.PI *radius * radius;
     }
+
+    //?division
+    public int divide(int a, int b){
+        return a / b;
+    }
 }
