@@ -88,8 +88,8 @@ public class Operators {
 
     public static void main(String[] args) {
         Operators app = new Operators();
-        // app.arithmeticOperators();
-        // app.assignmentOperators();
+        app.arithmeticOperators();
+        app.assignmentOperators();
         app.comparisonOperators();
     }
 }
