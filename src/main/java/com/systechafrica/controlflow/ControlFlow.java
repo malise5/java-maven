@@ -28,7 +28,7 @@ public class ControlFlow {
         }
         else{
             grade = 'E';
-            LOGGER.info("Student grade: " + grade + "Take a Retake or a Supplementary Exam");
+            LOGGER.info("Student grade: " + grade + " 1F622 Take a Retake or a Supplementary Exam");  
         }
         
     }
