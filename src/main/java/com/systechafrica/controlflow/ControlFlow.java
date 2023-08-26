@@ -6,7 +6,7 @@ public class ControlFlow {
     private static final Logger LOGGER = Logger.getLogger(ControlFlow.class.getName());
 
     public void ifelseStatement() {
-        int maths = 70;
+        int maths = 35;
         char grade;
 
         if (maths >= 70) {
@@ -17,6 +17,18 @@ public class ControlFlow {
         else if (maths >=60 && maths <= 69) {
           grade = 'B';
           LOGGER.info("Student grade: " + grade); // + grade
+        }
+        else if (maths >=50 && maths <=59){
+            grade = 'C';
+            LOGGER.info("Student grade: " + grade);
+        }
+        else if (maths >=40 && maths <=49){
+            grade = 'D';
+            LOGGER.info("Student grade: " + grade);
+        }
+        else{
+            grade = 'E';
+            LOGGER.info("Student grade: " + grade + "Take a Retake or a Supplementary Exam");
         }
         
     }
@@ -52,7 +64,7 @@ public class ControlFlow {
     }
     public static void main(String[] args) {
         ControlFlow app = new ControlFlow();
-       app.ifelseStatement();
+        app.ifelseStatement();
         // app.switchStatement();
 
     }
