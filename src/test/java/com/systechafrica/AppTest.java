@@ -59,4 +59,12 @@ public class AppTest {
     void testDivide(){
         Assertions.assertThrows(ArithmeticException.class, () -> app.divide(1, 0), "Divide By Zero Should Throw");
     }
+
+    //?Testing if the grade less than 60% will flag an 'F' grade
+    @Test
+    void testGrade(){
+        char result = app.determiningGrade(59);
+        char expected = 'F';
+        Assertions.assertEquals(expected, result );
+    }
 }
