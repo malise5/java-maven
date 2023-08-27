@@ -1,12 +1,9 @@
 package com.systechafrica;
+import java.util.logging.Logger;
 
 
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+public class App {
+    private static final Logger LOGGER = Logger.getLogger(App.class.getName());
 
     //?Additional
     public int add(int a, int b) {
@@ -40,7 +37,7 @@ public class App
         }
         else if (numberGrade < 60){
             return 'F';
-        }
+        } 
         else if (numberGrade < 70){
             return 'D';
         }
@@ -53,5 +50,11 @@ public class App
         else {
             return 'A';
         }
+    }
+
+    //?Next Main Code
+    public static void main( String[] args ){
+        
+        LOGGER.info("Hello World!" );
     }
 }
