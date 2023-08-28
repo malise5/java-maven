@@ -65,6 +65,7 @@ public class LoopingStatements {
         app.whileLoop();
         app.doWhileLoop();
         app.breakJumpStatement();
+        app.continueJumpStatement();
 
     }
 }
