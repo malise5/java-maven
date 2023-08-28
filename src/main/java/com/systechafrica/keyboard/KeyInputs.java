@@ -11,7 +11,8 @@ public class KeyInputs {
   private void stringOut() {
     try (Scanner input = new Scanner(System.in)) {
       LOGGER.info("Enter Your Name? ");
-      LOGGER.info("Your name is " + input.next());
+      String jina = input.next();
+      LOGGER.info("Your name is " + jina);
     }
   }
 
