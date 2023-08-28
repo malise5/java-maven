@@ -28,10 +28,23 @@ public class KeyInputs {
     LOGGER.info("Sum is " + (a + b));
   }
 
+  private void userAge() {
+    Scanner input = new Scanner(System.in);
+
+    LOGGER.info("What is Your name: ");
+    String a = input.next();
+
+    LOGGER.info("What is your Age: ");
+    int b = input.nextInt();
+
+    LOGGER.info(a + " You are " + b + " Years Old!");
+  }
+
   public static void main(String[] args) {
     KeyInputs app = new KeyInputs();
     // app.stringOut();
-    app.intOut();
+    // app.intOut();
+    app.userAge();
 
   }
 
