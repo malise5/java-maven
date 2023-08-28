@@ -39,12 +39,32 @@ public class LoopingStatements {
         LOGGER.info("Counter = " + counter);
 
     }
+    // ?jump statement
+
+    public void breakJumpStatement() {
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            LOGGER.info("my index is = " + i);
+        }
+    }
+
+    public void continueJumpStatement() {
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            LOGGER.info("my index is = " + i);
+        }
+    }
 
     public static void main(String[] args) {
         LoopingStatements app = new LoopingStatements();
         // app.forLoop();
         app.whileLoop();
         app.doWhileLoop();
+        app.breakJumpStatement();
 
     }
 }
