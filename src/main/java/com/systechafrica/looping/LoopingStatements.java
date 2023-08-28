@@ -27,10 +27,24 @@ public class LoopingStatements {
 
     }
 
+    public void doWhileLoop() {
+
+        int myNumber = 0;
+        int counter = 0;
+        do {
+            LOGGER.info("my number is: " + myNumber);
+            myNumber++; // myNumber = myNumber + 1
+            counter++;
+        } while (myNumber < 10);
+        LOGGER.info("Counter = " + counter);
+
+    }
+
     public static void main(String[] args) {
         LoopingStatements app = new LoopingStatements();
         // app.forLoop();
         app.whileLoop();
+        app.doWhileLoop();
 
     }
 }
