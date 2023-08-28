@@ -17,13 +17,14 @@ public class KeyInputs {
 
   private void intOut() {
     Scanner input = new Scanner(System.in);
-    Scanner input2 = new Scanner(System.in);
 
-    LOGGER.info("Enter Your Number? ");
+    LOGGER.info("Enter the first number: ");
     int a = input.nextInt();
-    int b = input2.nextInt();
-    LOGGER.info("sum is " + (a + b));
 
+    LOGGER.info("Enter the second number: ");
+    int b = input.nextInt();
+
+    LOGGER.info("Sum is " + (a + b));
   }
 
   public static void main(String[] args) {
