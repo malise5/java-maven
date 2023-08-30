@@ -66,10 +66,18 @@ public class WorkingWithArrays {
 
   }
 
+  public static int[] getNumbers() {
+    return new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+  }
+
   public static void main(String[] args) {
     WorkingWithArrays app = new WorkingWithArrays();
     // app.singleDimensionalArray();
-    app.multiDimensionalArray();
+    // app.multiDimensionalArray();
+
+    int[] number = getNumbers();
+    // ??returns the address of the array
+    System.out.println(number);
   }
 
 }
