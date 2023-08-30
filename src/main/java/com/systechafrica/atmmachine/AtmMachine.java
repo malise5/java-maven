@@ -11,9 +11,11 @@ public class AtmMachine {
     Scanner scanner = new Scanner(System.in);
 
     // Display welcome message and prompt for username and password
-    System.out.println("*******************");
-    System.out.println("ATM SIMULATOR ");
-    System.out.println("*******************");
+    System.out.println("****************************");
+    System.out.println("WELCOME TO ATM SIMULATOR " + "💰");
+    System.out.println("-------------------------------");
+    System.out.println("Please Insert Your ATM-CARD ");
+    System.out.println("*****************************");
 
     System.out.print("Enter your Username To Get Started: ");
     String username = scanner.nextLine();
