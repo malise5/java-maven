@@ -8,11 +8,11 @@ public class AtmMachine {
     final String DB_PASSWORD = "malise123";
     int balance = 100_001_000;
 
-    // Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-    // System.out.println("*******************");
-    // System.out.println("ATM SIMULATOR ");
-    // System.out.println("*******************");
+    System.out.println("*******************");
+    System.out.println("ATM SIMULATOR ");
+    System.out.println("*******************");
 
     // System.out.print("Enter your username: ");
     // String username = scanner.nextLine();
