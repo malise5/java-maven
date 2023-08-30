@@ -14,20 +14,20 @@ public class AtmMachine {
     System.out.println("ATM SIMULATOR ");
     System.out.println("*******************");
 
-    // System.out.print("Enter your username: ");
-    // String username = scanner.nextLine();
+    System.out.print("Enter your username: ");
+    String username = scanner.nextLine();
 
-    // System.out.print("Enter your password: ");
-    // String password = scanner.nextLine();
+    System.out.print("Enter your password: ");
+    String password = scanner.nextLine();
 
-    // if (username.equals(DB_USERNAME) && password.equals(DB_PASSWORD)) {
-    // System.out.println("______________________________________");
-    // System.out.println("Welcome to our SystechBank" + DB_USERNAME);
-    // System.out.println("______________________________________");
+    if (username.equals(DB_USERNAME) && password.equals(DB_PASSWORD)) {
+      System.out.println("______________________________________");
+      System.out.println("Welcome to our SystechBank" + DB_USERNAME);
+      System.out.println("______________________________________");
 
-    // } else {
-    // System.err.println("Incorrect username or password");
-    // }
+    } else {
+      System.err.println("Incorrect username or password");
+    }
 
     // System.out.println("*******************");
     // System.out.println("ATM SERVICES ");
