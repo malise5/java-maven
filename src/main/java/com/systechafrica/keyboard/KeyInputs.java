@@ -3,10 +3,8 @@ package com.systechafrica.keyboard;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import com.systechafrica.App;
-
 public class KeyInputs {
-  private static final Logger LOGGER = Logger.getLogger(App.class.getName());
+  private static final Logger LOGGER = Logger.getLogger(KeyInputs.class.getName());
 
   private void stringOut() {
     try (Scanner input = new Scanner(System.in)) {

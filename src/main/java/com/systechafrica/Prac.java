@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Prac {
-  private static final Logger LOGGER = Logger.getLogger(App.class.getName());
+  private static final Logger LOGGER = Logger.getLogger(Prac.class.getName());
 
   private static void getA() {
     int[] a = { 1, 2, 3, 4, 5 };
