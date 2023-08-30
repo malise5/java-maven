@@ -42,7 +42,12 @@ public class AtmMachine {
         int option = scanner.nextInt();
 
         if (option == 1) {
+          System.out.println("---------------------------------------");
+          System.out.println("---------------------------------------");
           System.out.println("Your balance is: $" + balance);
+          System.out.println("---------------------------------------");
+          System.out.println("---------------------------------------");
+          System.out.println();
         } else if (option == 2) {
           System.out.print("Input Amount to deposit: ");
           long deposit = scanner.nextLong();
@@ -57,12 +62,18 @@ public class AtmMachine {
           } else {
             System.out.println("Insufficient Balance: $" + balance);
           }
+        } else if (option == 4) {
+          System.out.print("Input Amount to Transfer: ");
+          long transfer = scanner.nextLong();
+          balance -= transfer;
+          System.out.println("Withdrawal successful. Your balance is: $" + balance);
         } else if (option == 5) {
           System.out.println("Thank you for using our ATM. Goodbye!");
-          break; // Exit the loop
+          break;
         } else {
-          System.out.println("Invalid option selected.");
+          System.out.println("Invalid option selected. Please!! Try Again: ");
         }
+
       }
 
     } else {
