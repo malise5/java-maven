@@ -10,74 +10,65 @@ public class AtmMachine {
 
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("*******************");
-    System.out.println("ATM SIMULATOR ");
-    System.out.println("*******************");
+    // System.out.println("*******************");
+    // System.out.println("ATM SIMULATOR ");
+    // System.out.println("*******************");
 
-    System.out.print("Enter your username: ");
-    String username = scanner.nextLine();
+    // System.out.print("Enter your username: ");
+    // String username = scanner.nextLine();
 
-    System.out.print("Enter your password: ");
-    String password = scanner.nextLine();
+    // System.out.print("Enter your password: ");
+    // String password = scanner.nextLine();
 
-    if (username.equals(DB_USERNAME) && password.equals(DB_PASSWORD)) {
-      System.out.println("______________________________________");
-      System.out.println("Welcome to our SystechBank" + DB_USERNAME);
-      System.out.println("______________________________________");
+    // if (username.equals(DB_USERNAME) && password.equals(DB_PASSWORD)) {
+    // System.out.println("______________________________________");
+    // System.out.println("Welcome to our SystechBank, " + DB_USERNAME);
+    // System.out.println("______________________________________");
 
-      while (true) {
-        System.out.println("*******************");
-        System.out.println("ATM SERVICES ");
-        System.out.println("*******************");
+    // while (true) {
+    // System.out.println("*******************");
+    // System.out.println("ATM SERVICES ");
+    // System.out.println("*******************");
 
-        System.out.println("************************");
+    // System.out.println("************************");
+    // System.out.println("1. Check Balance");
+    // System.out.println("2. Deposit");
+    // System.out.println("3. Withdraw");
+    // System.out.println("4. Transfer Cash");
+    // System.out.println("5. Quit");
+    // System.out.println("************************");
 
-        System.out.println("1. Check Balance");
-        System.out.println("2. Deposit");
-        System.out.println("3. Withdraw");
-        System.out.println("4. Transfer Cash");
-        System.out.println("4. Quit");
+    // System.out.print("Select an option to continue: ");
+    // int option = scanner.nextInt();
 
-        System.out.println("Select an option To continue: ");
+    // if (option == 1) {
+    // System.out.println("Your balance is: $" + balance);
+    // } else if (option == 2) {
+    // System.out.print("Input Amount to deposit: ");
+    // long deposit = scanner.nextLong();
+    // balance += deposit;
+    // System.out.println("Your balance is: $" + balance);
+    // } else if (option == 3) {
+    // System.out.print("Input Amount to withdraw: ");
+    // long withdraw = scanner.nextLong();
+    // if (withdraw <= balance) {
+    // balance -= withdraw;
+    // System.out.println("Withdrawal successful. Your balance is: $" + balance);
+    // } else {
+    // System.out.println("Insufficient Balance: $" + balance);
+    // }
+    // } else if (option == 5) {
+    // System.out.println("Thank you for using our ATM. Goodbye!");
+    // break; // Exit the loop
+    // } else {
+    // System.out.println("Invalid option selected.");
+    // }
+    // }
 
-        System.out.print("Input Your Option: ");
-        int option = scanner.nextInt();
-        if (option == 1 && true) {
-          System.out.println("Your balance is: $" + balance);
+    // } else {
+    // System.err.println("Incorrect username or password");
+    // }
 
-          System.out.println("************************");
-          System.out.println("Select an option:");
-          System.out.println("1. Check Balance");
-          System.out.println("2. Deposit");
-          System.out.println("3. Withdraw");
-          System.out.println("4. Transfer Cash");
-          System.out.println("4. Quit");
-
-          System.out.println("*********Choose and Option to Continue**************");
-
-        } else if (option == 2) {
-          System.out.println("Input Amount to deposit: ");
-          System.out.print("Deposit Amount: ");
-          int deposit = scanner.nextInt();
-          balance += deposit;
-          System.out.println("Your balance is: $" + (balance));
-        } else if (option == 3) {
-          System.out.println("Input Amount to withdraw: ");
-          System.out.print("Withdraw Amount: ");
-          int withdraw = scanner.nextInt();
-          balance -= withdraw;
-          System.out.println("Your balance is: $" + (balance));
-          if (withdraw < balance) {
-            System.out.println("insufficient Balance: " + withdraw);
-          }
-        }
-      }
-
-    } else {
-      System.err.println("Incorrect username or password");
-    }
-
-    // scanner.close();
+    scanner.close();
   }
-
 }
