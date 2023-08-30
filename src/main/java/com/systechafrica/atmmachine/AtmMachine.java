@@ -6,7 +6,7 @@ public class AtmMachine {
   public static void main(String[] args) {
     final String DB_USERNAME = "malise";
     final String DB_PASSWORD = "malise123";
-    long balance = 100001000L;
+    int balance = 100001000;
 
     Scanner scanner = new Scanner(System.in);
 
@@ -52,15 +52,25 @@ public class AtmMachine {
           System.out.print("Input Amount to deposit: ");
           long deposit = scanner.nextLong();
           balance += deposit;
+          System.out.println("---------------------------------------");
+          System.out.println("---------------------------------------");
           System.out.println("Your balance is: $" + balance);
+          System.out.println("---------------------------------------");
+          System.out.println("---------------------------------------");
         } else if (option == 3) {
           System.out.print("Input Amount to withdraw: ");
           long withdraw = scanner.nextLong();
-          if (withdraw <= balance) {
-            balance -= withdraw;
+          double discount = withdraw + (withdraw * 0.2);
+          balance -= discount;
+          if (withdraw < balance) {
             System.out.println("Withdrawal successful. Your balance is: $" + balance);
           } else {
+
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
             System.out.println("Insufficient Balance: $" + balance);
+            System.out.println("---------------------------------------");
+            System.out.println("---------------------------------------");
           }
         } else if (option == 4) {
           System.out.print("Input Amount to Transfer: ");
