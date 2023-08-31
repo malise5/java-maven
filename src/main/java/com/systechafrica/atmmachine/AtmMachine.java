@@ -68,7 +68,7 @@ public class AtmMachine {
           // Withdraw
           System.out.print("Input Amount to withdraw: ");
           long withdraw = scanner.nextLong();
-          double cost = withdraw * 0.2;
+          double cost = withdraw * 0.02;
           double discount = withdraw + cost;
           balance -= discount;
           if (withdraw < balance) {
