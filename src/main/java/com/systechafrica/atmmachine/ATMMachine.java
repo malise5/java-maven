@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ATMMachine {
     final double INITIAL_BALANCE = 1000.00;
     final double WITHDRAWAL_CHARGES = 0.02;
-    final String DEFAULT_PASSWORD = "Admin123";
+    final String DEFAULT_PASSWORD = "Malise123";
     final int LOGIN_ATTEMPTS = 3;
     double runningBalance = INITIAL_BALANCE;
     Scanner scanner = new Scanner(System.in);
