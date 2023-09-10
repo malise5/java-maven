@@ -53,7 +53,7 @@ public class Restaurant {
     unitPrices[itemCount] = unitPrice;
 
     // Update the total due
-    totalDue += quantity * unitPrice;
+    totalDue += (quantity * unitPrice);
 
     // Increment itemCount once
     itemCount++;
