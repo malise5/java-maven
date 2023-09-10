@@ -70,23 +70,23 @@ public class Restaurant {
     }
   }
 
-  // public void displayReceipt() {
-  // // Viewing items and total due
-  // System.out.println("\nItems Bought:");
-  // for (int i = 0; i < itemCount; i++) {
-  // System.out.println("Item: " + cartItems[i] + " | Quantity: " + quantities[i]
-  // + " | Unit Price: " + unitPrices[i]);
-  // }
-  // System.out.println("*************************************");
-  // System.out.println("Total Due: " + totalDue + "");
-  // System.out.println("*************************************");
+  public void displayReceipt() {
+    // Viewing items and total due
+    System.out.println("\nItems Bought:");
+    for (int i = 0; i < itemCount; i++) {
+      System.out.println("Item: " + cartItems[i] + " | Quantity: " + quantities[i]
+          + " | Unit Price: " + unitPrices[i]);
+    }
+    System.out.println("*************************************");
+    System.out.println("Total Due: " + totalDue + "");
+    System.out.println("*************************************");
 
-  // makePayment();
+    makePayment();
 
-  // System.out.println("*************************************");
-  // System.out.println("THANK YOU FOR SHOPPING WITH US");
-  // System.out.println("*************************************");
-  // }
+    System.out.println("*************************************");
+    System.out.println("THANK YOU FOR SHOPPING WITH US");
+    System.out.println("*************************************");
+  }
 
   // public static void main(String[] args) {
   // Restaurant app = new Restaurant();
