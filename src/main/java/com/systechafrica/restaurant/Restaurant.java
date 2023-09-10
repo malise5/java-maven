@@ -88,33 +88,33 @@ public class Restaurant {
     System.out.println("*************************************");
   }
 
-  // public static void main(String[] args) {
-  // Restaurant app = new Restaurant();
-  // boolean loggedIn = app.login();
+  public static void main(String[] args) {
+    Restaurant app = new Restaurant();
+    boolean loggedIn = app.login();
 
-  // if (loggedIn) {
-  // boolean keepDisplay = true;
+    if (loggedIn) {
+      boolean keepDisplay = true;
 
-  // while (keepDisplay) {
-  // app.displayMenu();
-  // System.out.print("Choose an Option: ");
-  // int option = app.scanner.nextInt();
+      while (keepDisplay) {
+        app.displayMenu();
+        System.out.print("Choose an Option: ");
+        int option = app.scanner.nextInt();
 
-  // switch (option) {
-  // case 1:
-  // app.addItems();
-  // break;
-  // case 2:
-  // app.makePayment();
-  // break;
-  // case 3:
-  // app.displayReceipt();
-  // break;
-  // default:
-  // System.out.println("Invalid option");
-  // break;
-  // }
-  // }
-  // }
-  // }
+        // switch (option) {
+        // case 1:
+        // app.addItems();
+        // break;
+        // case 2:
+        // app.makePayment();
+        // break;
+        // case 3:
+        // app.displayReceipt();
+        // break;
+        // default:
+        // System.out.println("Invalid option");
+        // break;
+        // }
+      }
+    }
+  }
 }
