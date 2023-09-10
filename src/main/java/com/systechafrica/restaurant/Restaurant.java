@@ -37,14 +37,14 @@ public class Restaurant {
     System.out.println("3. DISPLAY RECEIPT");
   }
 
-  // public void addItems() {
-  // // Adding items
-  // System.out.print("Enter Item Code: ");
-  // String item = scanner.nextLine();
-  // System.out.print("Enter Quantity: ");
-  // int quantity = scanner.nextInt();
-  // System.out.print("Enter Unit Price: ");
-  // double unitPrice = scanner.nextDouble();
+  public void addItems() {
+  // Adding items
+  System.out.print("Enter Item Code: ");
+  String item = scanner.nextLine();
+  System.out.print("Enter Quantity: ");
+  int quantity = scanner.nextInt();
+  System.out.print("Enter Unit Price: ");
+  double unitPrice = scanner.nextDouble();
 
   // // Add the item to the lists
   // cartItems[itemCount] = item;
