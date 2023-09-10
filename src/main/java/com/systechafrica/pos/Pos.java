@@ -11,7 +11,7 @@ public class Pos {
   String[] cartItems = new String[100];
   int[] quantities = new int[100];
   double[] unitPrices = new double[100];
-  Scanner scanner = new Scanner(System.in);
+  public Scanner scanner = new Scanner(System.in);
 
   // Login logic
   public boolean login() {
