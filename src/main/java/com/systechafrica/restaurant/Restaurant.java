@@ -72,7 +72,7 @@ public class Restaurant {
 
   public void displayReceipt() {
     // Viewing items and total due
-    System.out.println("\nItems Bought:");
+    System.out.println("Items Bought:");
     for (int i = 0; i < itemCount; i++) {
       System.out.println("Item: " + cartItems[i] + " | Quantity: " + quantities[i]
           + " | Unit Price: " + unitPrices[i]);
