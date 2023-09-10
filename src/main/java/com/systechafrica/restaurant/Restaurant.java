@@ -100,20 +100,20 @@ public class Restaurant {
         System.out.print("Choose an Option: ");
         int option = app.scanner.nextInt();
 
-        // switch (option) {
-        // case 1:
-        // app.addItems();
-        // break;
-        // case 2:
-        // app.makePayment();
-        // break;
-        // case 3:
-        // app.displayReceipt();
-        // break;
-        // default:
-        // System.out.println("Invalid option");
-        // break;
-        // }
+        switch (option) {
+          case 1:
+            app.addItems();
+            break;
+          case 2:
+            app.makePayment();
+            break;
+          case 3:
+            app.displayReceipt();
+            break;
+          default:
+            System.out.println("Invalid option");
+            break;
+        }
       }
     }
   }
