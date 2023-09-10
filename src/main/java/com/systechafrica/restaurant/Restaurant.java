@@ -11,22 +11,22 @@ public class Restaurant {
   double[] unitPrices = new double[100];
   Scanner scanner = new Scanner(System.in);
 
-  // public boolean login() {
-  // int loginEntries = 1;
-  // boolean loggedIn = false;
+  public boolean login() {
+    int loginEntries = 1;
+    boolean loggedIn = false;
 
-  // while (loginEntries <= 3) {
-  // System.out.print("Enter your password: ");
-  // String userPassword = scanner.nextLine();
-  // if (userPassword.equals(DEFAULT_PASSWORD)) {
-  // loggedIn = true;
-  // break;
-  // }
-  // System.out.println("Wrong password");
-  // loginEntries++;
-  // }
-  // return loggedIn;
-  // }
+    while (loginEntries <= 3) {
+      System.out.print("Enter your password: ");
+      String userPassword = scanner.nextLine();
+      if (userPassword.equals(DEFAULT_PASSWORD)) {
+        loggedIn = true;
+        break;
+      }
+      System.out.println("Wrong password");
+      loginEntries++;
+    }
+    return loggedIn;
+  }
 
   // public void displayMenu() {
   // System.out.println("-----------------------\n");
