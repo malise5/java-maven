@@ -30,9 +30,9 @@ public class Restaurant {
   }
 
   public void displayMenu() {
-    System.out.println("-----------------------\n");
-    System.out.println("SYSTECH POS SYSTEM\n");
-    System.out.println("-----------------------\n");
+    System.out.println("-----------------------");
+    System.out.println("SYSTECH POS SYSTEM");
+    System.out.println("-----------------------");
     System.out.println("1. ADD ITEM");
     System.out.println("2. MAKE PAYMENT");
     System.out.println("3. DISPLAY RECEIPT");
