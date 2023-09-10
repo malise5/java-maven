@@ -38,25 +38,25 @@ public class Restaurant {
   }
 
   public void addItems() {
-  // Adding items
-  System.out.print("Enter Item Code: ");
-  String item = scanner.nextLine();
-  System.out.print("Enter Quantity: ");
-  int quantity = scanner.nextInt();
-  System.out.print("Enter Unit Price: ");
-  double unitPrice = scanner.nextDouble();
+    // Adding items
+    System.out.print("Enter Item Code: ");
+    String item = scanner.nextLine();
+    System.out.print("Enter Quantity: ");
+    int quantity = scanner.nextInt();
+    System.out.print("Enter Unit Price: ");
+    double unitPrice = scanner.nextDouble();
 
-  // // Add the item to the lists
-  // cartItems[itemCount] = item;
-  // quantities[itemCount] = quantity;
-  // unitPrices[itemCount] = unitPrice;
+    // Add the item to the lists
+    cartItems[itemCount] = item;
+    quantities[itemCount] = quantity;
+    unitPrices[itemCount] = unitPrice;
 
-  // // Update the total due
-  // totalDue += quantity * unitPrice;
+    // Update the total due
+    totalDue += quantity * unitPrice;
 
-  // // Increment itemCount once
-  // itemCount++;
-  // }
+    // Increment itemCount once
+    itemCount++;
+  }
 
   // public void makePayment() {
   // System.out.print("Enter the amount given by the customer: ");
