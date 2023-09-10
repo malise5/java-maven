@@ -11,6 +11,7 @@ public class Restaurant {
   double[] unitPrices = new double[100];
   Scanner scanner = new Scanner(System.in);
 
+  // Login logic
   public boolean login() {
     int loginEntries = 1;
     boolean loggedIn = false;
