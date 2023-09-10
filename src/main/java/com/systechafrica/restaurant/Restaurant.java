@@ -3,13 +3,13 @@ package com.systechafrica.restaurant;
 import java.util.Scanner;
 
 public class Restaurant {
-  // final String DEFAULT_PASSWORD = "Admin123";
-  // int itemCount = 0;
-  // double totalDue = 0;
-  // String[] cartItems = new String[100];
-  // int[] quantities = new int[100];
-  // double[] unitPrices = new double[100];
-  // Scanner scanner = new Scanner(System.in);
+  final String DEFAULT_PASSWORD = "Admin123";
+  int itemCount = 0;
+  double totalDue = 0;
+  String[] cartItems = new String[100];
+  int[] quantities = new int[100];
+  double[] unitPrices = new double[100];
+  Scanner scanner = new Scanner(System.in);
 
   // public boolean login() {
   // int loginEntries = 1;
