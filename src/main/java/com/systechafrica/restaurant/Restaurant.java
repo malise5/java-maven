@@ -58,17 +58,17 @@ public class Restaurant {
     itemCount++;
   }
 
-  // public void makePayment() {
-  // System.out.print("Enter the amount given by the customer: ");
-  // double amountGiven = scanner.nextDouble();
+  public void makePayment() {
+    System.out.print("Enter the amount given by the customer: ");
+    double amountGiven = scanner.nextDouble();
 
-  // if (amountGiven >= totalDue) {
-  // double change = amountGiven - totalDue;
-  // System.out.println("Change: " + change);
-  // } else {
-  // System.out.println("Insufficient amount: ");
-  // }
-  // }
+    if (amountGiven >= totalDue) {
+      double change = amountGiven - totalDue;
+      System.out.println("Change: " + change);
+    } else {
+      System.out.println("Insufficient amount: ");
+    }
+  }
 
   // public void displayReceipt() {
   // // Viewing items and total due
