@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Pos {
   final String DEFAULT_PASSWORD = "Admin123";
+
   int itemCount = 0;
   double totalDue = 0;
   double change;
