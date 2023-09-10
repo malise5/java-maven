@@ -31,7 +31,7 @@ public class Restaurant {
               System.out.print("Pay Now For: ");
               for (int i = 0; i < menu.length; i++) {
                 if (menu[i] != null) {
-                  System.out.println(menu[i] + " Price " + initialPrice);
+                  System.out.println(menu[i] + " Price " + app.CHAI);
                 }
               }
               System.out.println("Total Price: " + initialPrice);
@@ -49,7 +49,7 @@ public class Restaurant {
               System.out.print("Pay Now For: ");
               for (int i = 0; i < menu.length; i++) {
                 if (menu[i] != null) {
-                  System.out.println(menu[i] + " Price " + initialPrice);
+                  System.out.println(menu[i] + " Price " + app.ANDAZI);
                 }
               }
               System.out.println("Total Price: " + initialPrice);
@@ -67,7 +67,7 @@ public class Restaurant {
               System.out.print("Pay Now For: ");
               for (int i = 0; i < menu.length; i++) {
                 if (menu[i] != null) {
-                  System.out.println(menu[i] + " Price " + initialPrice);
+                  System.out.println(menu[i] + " Price " + app.TOSTI);
                 }
               }
               System.out.println("Total Price: " + initialPrice);
@@ -78,14 +78,14 @@ public class Restaurant {
 
           case 4:
             menu[initalIndex + 3] = "NDENG AND ACCOMPLISHMENTS";
-            initialPrice += app.TOSTI;
+            initialPrice += app.NDENGU_AND_ACCOMPLISHMENTS;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem3 = restaurant.scanner.nextLine();
             if (!anotherItem3.equals("y")) {
               System.out.print("Pay Now For: ");
               for (int i = 0; i < menu.length; i++) {
                 if (menu[i] != null) {
-                  System.out.println(menu[i] + " Price " + initialPrice);
+                  System.out.println(menu[i] + " Price " + app.NDENGU_AND_ACCOMPLISHMENTS);
                 }
               }
               System.out.println("Total Price: " + initialPrice);
@@ -96,14 +96,14 @@ public class Restaurant {
 
           case 5:
             menu[initalIndex + 4] = "BEANS AND ACCOMPLISHMENTS";
-            initialPrice += app.TOSTI;
+            initialPrice += app.BEANS_AND_ACCOMPLISHMENTS;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem4 = restaurant.scanner.nextLine();
             if (!anotherItem4.equals("y")) {
               System.out.print("Pay Now For: ");
               for (int i = 0; i < menu.length; i++) {
                 if (menu[i] != null) {
-                  System.out.println(menu[i] + " Price " + initialPrice);
+                  System.out.println(menu[i] + " Price " + app.BEANS_AND_ACCOMPLISHMENTS);
                 }
               }
               System.out.println("Total Price: " + initialPrice);
@@ -113,15 +113,15 @@ public class Restaurant {
             break;
 
           case 6:
-            menu[initalIndex + 5] = "BEANS AND ACCOMPLISHMENTS";
-            initialPrice += app.TOSTI;
+            menu[initalIndex + 5] = "PILAU VEG";
+            initialPrice += app.PILAU_VEG;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem5 = restaurant.scanner.nextLine();
             if (!anotherItem5.equals("y")) {
               System.out.print("Pay Now For: ");
               for (int i = 0; i < menu.length; i++) {
                 if (menu[i] != null) {
-                  System.out.println(menu[i] + " Price " + initialPrice);
+                  System.out.println(menu[i] + " Price " + app.PILAU_VEG);
                 }
               }
               System.out.println("Total Price: " + initialPrice);
