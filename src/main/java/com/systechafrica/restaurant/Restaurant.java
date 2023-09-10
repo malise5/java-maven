@@ -41,7 +41,7 @@ public class Restaurant {
             break;
 
           case 2:
-            menu[initalIndex] = "ANDAZI";
+            menu[initalIndex + 1] = "ANDAZI";
             initialPrice += app.ANDAZI;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem1 = restaurant.scanner.nextLine();
@@ -59,7 +59,7 @@ public class Restaurant {
             break;
 
           case 3:
-            menu[0] = "TOSTI";
+            menu[initalIndex + 2] = "TOSTI";
             initialPrice += app.TOSTI;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem2 = restaurant.scanner.nextLine();
@@ -77,7 +77,7 @@ public class Restaurant {
             break;
 
           case 4:
-            menu[0] = "NDENG AND ACCOMPLISHMENTS";
+            menu[initalIndex + 3] = "NDENG AND ACCOMPLISHMENTS";
             initialPrice += app.TOSTI;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem3 = restaurant.scanner.nextLine();
@@ -95,7 +95,7 @@ public class Restaurant {
             break;
 
           case 5:
-            menu[0] = "BEANS AND ACCOMPLISHMENTS";
+            menu[initalIndex + 4] = "BEANS AND ACCOMPLISHMENTS";
             initialPrice += app.TOSTI;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem4 = restaurant.scanner.nextLine();
@@ -113,7 +113,7 @@ public class Restaurant {
             break;
 
           case 6:
-            menu[0] = "BEANS AND ACCOMPLISHMENTS";
+            menu[initalIndex + 5] = "BEANS AND ACCOMPLISHMENTS";
             initialPrice += app.TOSTI;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem5 = restaurant.scanner.nextLine();
