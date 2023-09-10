@@ -6,6 +6,7 @@ public class Restaurant {
   final String DEFAULT_PASSWORD = "Admin123";
   int itemCount = 0;
   double totalDue = 0;
+  double change;
   String[] cartItems = new String[100];
   int[] quantities = new int[100];
   double[] unitPrices = new double[100];
@@ -64,7 +65,7 @@ public class Restaurant {
     double amountGiven = scanner.nextDouble();
 
     if (amountGiven >= totalDue) {
-      double change = amountGiven - totalDue;
+      change = (amountGiven - totalDue);
       System.out.println("Change: " + change);
     } else {
       System.out.println("Insufficient amount: ");
@@ -79,7 +80,7 @@ public class Restaurant {
           + " | Unit Price: " + unitPrices[i]);
     }
     System.out.println("*************************************");
-    System.out.println("Total Due: " + totalDue + "");
+    System.out.println("Change: " + change);
     System.out.println("*************************************");
 
     makePayment();
