@@ -48,4 +48,8 @@ public class Menu {
     System.out.println("7. Quit");
   }
 
+  public void chai() {
+
+  }
+
 }
