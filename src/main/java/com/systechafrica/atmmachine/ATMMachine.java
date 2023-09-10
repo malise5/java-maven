@@ -91,21 +91,6 @@ public class ATMMachine {
             loginEntries++; // loginEntries = loginEntries+1;
         }
         return loggedIn;
-        /*
-         * // while the value remain "proceed"
-         * String retry = "Yes";
-         * 
-         * for (int i = 1; i <= LOGIN_ATTEMPTS; i++) {
-         * System.out.print("Enter your password: ");
-         * String userPassword = scanner.nextLine();
-         * if (userPassword.equals(DEFAULT_PASSWORD)) {
-         * // show menu
-         * loggedIn = true;
-         * break;
-         * }
-         * System.out.println("Wrong password");
-         * }
-         */
 
     }
 
