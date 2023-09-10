@@ -7,6 +7,7 @@ public class Restaurant {
   static String[] menu = new String[100];
   static int initialPrice = 0;
   static int initalIndex = 0;
+  int[] total;
 
   public static void main(String[] args) {
     Restaurant restaurant = new Restaurant();
@@ -35,14 +36,19 @@ public class Restaurant {
                 }
               }
               System.out.println("Total Price: " + initialPrice);
-              // restaurant.totalDisplay();
+
+              System.out.println();
+              System.out.print("Enter Amount to Pay ");
+              int money = restaurant.scanner.nextInt();
+              money -= initialPrice;
+              System.out.println("Your Balance is --------" + money);
+              initalIndex++;
               keepDisplay = false;
             }
             break;
 
           case 2:
-            menu[initalIndex + 1] = "ANDAZI";
-            initialPrice += app.ANDAZI;
+            menu[initalIndex] = "ANDAZI";
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem1 = restaurant.scanner.nextLine();
             if (!anotherItem1.equals("y")) {
@@ -53,13 +59,18 @@ public class Restaurant {
                 }
               }
               System.out.println("Total Price: " + initialPrice);
-              // restaurant.totalDisplay();
+              System.out.println();
+              System.out.print("Enter Amount to Pay ");
+              int money = restaurant.scanner.nextInt();
+              money -= initialPrice;
+              System.out.println("Your Balance is --------" + money);
+              initalIndex++;
               keepDisplay = false;
             }
             break;
 
           case 3:
-            menu[initalIndex + 2] = "TOSTI";
+            menu[initalIndex] = "TOSTI";
             initialPrice += app.TOSTI;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem2 = restaurant.scanner.nextLine();
@@ -71,13 +82,18 @@ public class Restaurant {
                 }
               }
               System.out.println("Total Price: " + initialPrice);
-              // restaurant.totalDisplay();
+              System.out.println();
+              System.out.print("Enter Amount to Pay ");
+              int money = restaurant.scanner.nextInt();
+              money -= initialPrice;
+              System.out.println("Your Balance is --------" + money);
+              initalIndex++;
               keepDisplay = false;
             }
             break;
 
           case 4:
-            menu[initalIndex + 3] = "NDENG AND ACCOMPLISHMENTS";
+            menu[initalIndex] = "NDENG AND ACCOMPLISHMENTS";
             initialPrice += app.NDENGU_AND_ACCOMPLISHMENTS;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem3 = restaurant.scanner.nextLine();
@@ -89,13 +105,18 @@ public class Restaurant {
                 }
               }
               System.out.println("Total Price: " + initialPrice);
-              // restaurant.totalDisplay();
+              System.out.println();
+              System.out.print("Enter Amount to Pay ");
+              int money = restaurant.scanner.nextInt();
+              money -= initialPrice;
+              System.out.println("Your Balance is --------" + money);
+              initalIndex++;
               keepDisplay = false;
             }
             break;
 
           case 5:
-            menu[initalIndex + 4] = "BEANS AND ACCOMPLISHMENTS";
+            menu[initalIndex] = "BEANS AND ACCOMPLISHMENTS";
             initialPrice += app.BEANS_AND_ACCOMPLISHMENTS;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem4 = restaurant.scanner.nextLine();
@@ -107,13 +128,18 @@ public class Restaurant {
                 }
               }
               System.out.println("Total Price: " + initialPrice);
-              // restaurant.totalDisplay();
+              System.out.println();
+              System.out.print("Enter Amount to Pay ");
+              int money = restaurant.scanner.nextInt();
+              money -= initialPrice;
+              System.out.println("Your Balance is --------" + money);
+              initalIndex++;
               keepDisplay = false;
             }
             break;
 
           case 6:
-            menu[initalIndex + 5] = "PILAU VEG";
+            menu[initalIndex] = "PILAU VEG";
             initialPrice += app.PILAU_VEG;
             System.out.print("Do you want to pick another meal/drink? (y/n): ");
             String anotherItem5 = restaurant.scanner.nextLine();
@@ -125,7 +151,12 @@ public class Restaurant {
                 }
               }
               System.out.println("Total Price: " + initialPrice);
-              // restaurant.totalDisplay();
+              System.out.println();
+              System.out.print("Enter Amount to Pay ");
+              int money = restaurant.scanner.nextInt();
+              money -= initialPrice;
+              System.out.println("Your Balance is --------" + money);
+              initalIndex++;
               keepDisplay = false;
             }
             break;
