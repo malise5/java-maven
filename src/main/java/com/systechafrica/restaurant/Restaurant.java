@@ -154,7 +154,7 @@ public class Restaurant {
               System.out.println();
               System.out.print("Enter Amount to Pay ");
               int money = restaurant.scanner.nextInt();
-              money -= initialPrice;
+              money -= initalIndex;
               System.out.println("Your Balance is --------" + money);
               initalIndex++;
               keepDisplay = false;
