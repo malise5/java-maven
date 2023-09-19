@@ -8,5 +8,13 @@ public class Main {
     app.stopPump();
     int a = Heatpump.powerUsagePerHour;
     System.out.println(a);
+
+    // ..testing the controllers
+    BookControllerImpl control = new BookControllerImpl();
+    Book book = new Book("1", "Jungle", "Halkano");
+    control.createBook(book);
+    control.findBook("1");
+    control.updateBook("1", "Animal KingDom");
+    control.deleteBook("1");
   }
 }
