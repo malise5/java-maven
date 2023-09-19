@@ -2,36 +2,46 @@ package com.systechafrica.part2.interfaces;
 
 public class BookControllerImpl implements BookController {
 
-  Book book = new Book("1", "Jungle", "Halkano");
+  private Book book; // Store the book instance
 
+  // Method to create a book
   @Override
   public Book createBook(Book book) {
     this.book = book;
+    System.out.println("Created book: " + book.getTitle() + " by " + book.getAuthorName());
     return book;
   }
 
+  // Method to find a book by its ISBN
   @Override
   public Book findBook(String isbn) {
-    if (this.book.getIsbn().equals(isbn)) {
-      return book;
+    // Check if the book exists and its ISBN matches the provided ISBN
+    if (this.book != null && this.book.getIsbn().equals(isbn)) {
+      System.out.println("The book is " + isbn);
+      return book; // Return the book if found
     }
-    return null;
+    return null; // Return null if book not found
   }
 
+  // Method to update a book's title based on its ISBN
   @Override
   public Book updateBook(String isbn, String title) {
-    if (this.book.getIsbn().equals(isbn)) {
-      this.book.setTitle(title);
+    // Check if the book exists and its ISBN matches the provided ISBN
+    if (this.book != null && this.book.getIsbn().equals(isbn)) {
+      this.book.setTitle(title); // Update the book's title
+      System.out.println("Updated book title to: " + title);
       return this.book;
     }
-    return null; // Book not found
+    return null; // Return null if book not found
   }
 
+  // Method to delete a book based on its ISBN
   @Override
   public void deleteBook(String isbn) {
-    if (this.book.getIsbn().equals(isbn)) {
+    // Check if the book exists and its ISBN matches the provided ISBN
+    if (this.book != null && this.book.getIsbn().equals(isbn)) {
       this.book = null; // Simulate book deletion by setting it to null
+      System.out.println("Deleted book with ISBN: " + isbn);
     }
   }
-
 }
