@@ -1,4 +1,4 @@
-package com.systechafrica.part2.interfaces;
+package com.systechafrica.part2.interfaces.booksApi;
 
 public class BookControllerImpl implements BookController {
 
