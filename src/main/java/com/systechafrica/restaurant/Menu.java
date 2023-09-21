@@ -34,22 +34,17 @@ public class Menu {
   }
 
   public void displayMenu() {
-    System.out.println("DRINKS------------------------");
-    System.out.println("----------");
-    System.out.println("1. CHAI-----------------------------------------15");
-    System.out.println("2. ANDAZI---------------------------------------10");
-    System.out.println("3. TOSTI----------------------------------------12");
-
-    System.out.println("MEALS------------------------");
-    System.out.println("---------");
-    System.out.println("4. NDENGU AND ACCOMPLISHMENTS--------------------15");
-    System.out.println("5. BEANS AND ACCOMPLISHMENTS---------------------10");
-    System.out.println("6. PILAU VEG-------------------------------------12");
+    System.out.println("-------------.-.-.------------");
+    System.out.println("SYSTECH RESTAURANT:");
+    System.out.println("DRINKS");
+    System.out.println("1. Chai...........................15");
+    System.out.println("2. Andazi.........................10");
+    System.out.println("3. Tosti.........................12");
+    System.out.println("MEALS");
+    System.out.println("4. Ndegú and Ugali..................70");
+    System.out.println("5. Beans and Accomplishment.........70");
+    System.out.println("6. Pilau Veg.....................90");
     System.out.println("7. Quit");
-  }
-
-  public void chai() {
-
   }
 
 }
