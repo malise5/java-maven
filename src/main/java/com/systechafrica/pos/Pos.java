@@ -41,6 +41,7 @@ public class Pos {
   }
 
   public void addItems() {
+
     // Adding items
     System.out.print("Enter Item Code: ");
     String item = scanner.next();
@@ -76,48 +77,25 @@ public class Pos {
   public void displayReceipt() {
     // Viewing items and total due
     System.out.println("Items Bought:");
-    for (int i = 0; i < itemCount; i++) {
-      System.out.println("Item: " + cartItems[i] + " | Quantity: " + quantities[i]
-          + " | Unit Price: " + unitPrices[i]);
-    }
-    System.out.println("*************************************");
-    System.out.println("Change: " + change);
-    System.out.println("*************************************");
+    if (itemCount > 0) {
+      for (int i = 0; i < itemCount; i++) {
 
-    makePayment();
-
-    System.out.println("*************************************");
-    System.out.println("THANK YOU FOR SHOPPING WITH US");
-    System.out.println("*************************************");
-  }
-
-  public static void main(String[] args) {
-    Pos app = new Pos();
-    boolean loggedIn = app.login();
-
-    if (loggedIn) {
-      boolean keepDisplay = true;
-
-      while (keepDisplay) {
-        app.displayMenu();
-        System.out.print("Choose an Option: ");
-        int option = app.scanner.nextInt();
-
-        switch (option) {
-          case 1:
-            app.addItems();
-            break;
-          case 2:
-            app.makePayment();
-            break;
-          case 3:
-            app.displayReceipt();
-            break;
-          default:
-            System.out.println("Invalid option");
-            break;
-        }
+        System.out.println("Item: " + cartItems[i] + " | Quantity: " + quantities[i]
+            + " | Unit Price: " + unitPrices[i]);
       }
+      System.out.println("*************************************");
+      System.out.println("Change: " + change);
+      System.out.println("*************************************");
+
+      makePayment();
+
+      System.out.println("*************************************");
+      System.out.println("THANK YOU FOR SHOPPING WITH US");
+      System.out.println("*************************************");
+    } else {
+      System.out.println("Cart Empty Add!! ");
     }
+
   }
+
 }
