@@ -13,7 +13,6 @@ public class PosDemo {
   public static void main(String[] args) throws SecurityException, IOException {
     FileHandler fh = new FileHandler("poslog.txt");
     CustomFormatter formatter = new CustomFormatter();
-
     LOGGER.addHandler(fh);
     fh.setFormatter(formatter);
 
