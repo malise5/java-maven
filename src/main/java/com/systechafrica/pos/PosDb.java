@@ -83,6 +83,25 @@ public class PosDb {
 
         PosItems dbSales = new PosItems(id, item, quantity, unit_price);
         System.out.println(dbSales);
+
+        // =================Output in the DB==========
+        // +------------------+
+        // | Tables_in_javadb |
+        // +------------------+
+        // | sales |
+        // | students |
+        // +------------------+
+        // 2 rows in set (0.17 sec)
+
+        // mysql> SELECT * from sales;
+        // +----+----------+----------+------------+
+        // | id | item | quantity | unit_price |
+        // +----+----------+----------+------------+
+        // | 1 | cakes | 5 | 200 |
+        // | 2 | tomatoes | 5 | 200 |
+        // +----+----------+----------+------------+
+        // 2 rows in set (0.00 sec)
+
       }
 
     } catch (SecurityException e) {
