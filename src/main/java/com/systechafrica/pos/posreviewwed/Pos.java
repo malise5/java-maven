@@ -1,4 +1,4 @@
-package com.systechafrica.pos.posreviewed;
+package com.systechafrica.pos.posreviewwed;
 
 import java.util.Scanner;
 import java.util.logging.Logger;

@@ -1,4 +1,4 @@
-package com.systechafrica.pos.posreviewed;
+package com.systechafrica.pos.posreviewwed;
 
 import java.io.IOException;
 import java.util.Scanner;
