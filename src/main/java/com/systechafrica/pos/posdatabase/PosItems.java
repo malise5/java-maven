@@ -1,4 +1,4 @@
-package com.systechafrica.pos;
+package com.systechafrica.pos.posdatabase;
 
 public class PosItems {
   private int id;

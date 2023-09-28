@@ -1,4 +1,4 @@
-package com.systechafrica.pos;
+package com.systechafrica.pos.posreviewed;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -8,7 +8,11 @@ import com.systechafrica.pos.logger.FileLogging;
 public class Pos {
   private static final Logger LOGGER = Logger.getLogger(FileLogging.class.getName());
 
-  private final String defaultPassword = "Admin123";
+  // private final String defaultPassword = "Admin123";
+
+  private final String ADMIN_PASSWORD = "Admin123";
+  private int loginAttempts;
+  private final int MAX_LOGIN_ATTEMPTS = 3;
 
   private int itemCount = 0;
   private double totalDue = 0;
@@ -19,20 +23,24 @@ public class Pos {
   private Scanner scanner = new Scanner(System.in);
 
   public boolean login() {
-    int loginEntries = 1;
-    boolean loggedIn = false;
+    System.out.println("*********** KARIBU ***********");
+    System.out.println();
+    System.out.print("Enter Admin password to Continue: ");
+    String enteredPassword = scanner.nextLine();
 
-    while (loginEntries <= 3) {
-      System.out.print("Enter your password: ");
-      String userPassword = scanner.nextLine();
-      if (userPassword.equals(defaultPassword)) {
-        loggedIn = true;
-        break;
-      }
-      System.out.println("Wrong password");
-      loginEntries++;
+    if (enteredPassword.equals(ADMIN_PASSWORD)) {
+      return true;
     }
-    return loggedIn;
+
+    loginAttempts++;
+    System.out.println("Incorrect password. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
+
+    if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
+      System.out.println("Maximum login attempts reached. Exiting.");
+      return false;
+    }
+
+    return login();
   }
 
   public void displayMenu() {
@@ -51,21 +59,12 @@ public class Pos {
 
     System.out.print("Enter Quantity: ");
     int quantity;
-    try {
-      quantity = Integer.parseInt(scanner.nextLine());
-    } catch (NumberFormatException e) {
-      System.out.println("Invalid quantity. Please enter a valid number.");
-      return;
-    }
+    quantity = Integer.parseInt(scanner.nextLine());
 
     System.out.print("Enter Unit Price: ");
     double unitPrice;
-    try {
-      unitPrice = Double.parseDouble(scanner.nextLine());
-    } catch (NumberFormatException e) {
-      System.out.println("Invalid unit price. Please enter a valid number.");
-      return;
-    }
+
+    unitPrice = Double.parseDouble(scanner.nextLine());
 
     cartItems[itemCount] = item;
     quantities[itemCount] = quantity;
@@ -74,12 +73,13 @@ public class Pos {
     totalDue += (quantity * unitPrice);
     itemCount++;
 
-    // Ask if the user wants to add more items
     System.out.print("Do you want to add more items? (y/n): ");
-    String addMoreItems = scanner.nextLine().trim().toLowerCase();
+    String input = scanner.nextLine().trim().toLowerCase();
 
-    if (addMoreItems.equals("y")) {
+    if (input.equals("y")) {
       addItems();
+    } else {
+      makePayment();
     }
   }
 
@@ -97,6 +97,10 @@ public class Pos {
       change = (amountGiven - totalDue);
       LOGGER.info("Change: " + change + "\n");
       System.out.println("Change: " + change);
+      System.out.println();
+      System.out.println("============Receipt==========");
+      displayReceipt();
+      System.out.println();
     } else {
       LOGGER.warning("Insufficient amount: \n");
       System.out.println("Insufficient amount: ");
@@ -113,7 +117,7 @@ public class Pos {
             .println("Item: " + cartItems[i] + " | Quantity: " + quantities[i] + " | Unit Price: " + unitPrices[i]);
       }
       System.out.println("*************************************");
-      System.out.println("Change: " + change);
+      System.out.println("Change: " + change + "Ksh");
       System.out.println("*************************************");
 
       System.out.println("*************************************");
