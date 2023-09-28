@@ -23,6 +23,7 @@ public class Pos {
   private Scanner scanner = new Scanner(System.in);
 
   public boolean login() {
+    System.out.println();
     System.out.println("*********** KARIBU ***********");
     System.out.println();
     System.out.print("Enter Admin password to Continue: ");
@@ -45,7 +46,7 @@ public class Pos {
 
   public void displayMenu() {
     System.out.println("-----------------------");
-    System.out.println("SYSTECH POS SYSTEM");
+    System.out.println("======= SYSTECH POS SYSTEM ===========");
     System.out.println("-----------------------");
     System.out.println("1. ADD ITEM");
     System.out.println("2. MAKE PAYMENT");
