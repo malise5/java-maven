@@ -115,6 +115,8 @@ public class PosDb {
 
     } catch (SQLException e) {
       LOGGER.severe("Database operation failure" + e.getMessage() + "\n");
+    } catch (NullPointerException e) {
+      LOGGER.severe("Incorrent input which returns  => " + e.getMessage());
     }
 
   }
@@ -122,29 +124,24 @@ public class PosDb {
   private static PosItems getSalesDetails(Scanner scanner) {
     System.out.print("Enter Your password: ");
     String pass = scanner.nextLine();
+    PosItems admin = new PosItems();
 
-    try {
-      PosItems admin = new PosItems();
+    if (admin.getDefaultPassword().equals(pass)) {
+      System.out.println("\n************* Welcome ***************\n");
 
-      if (admin.getDefaultPassword().equals(pass)) {
-        System.out.println("\n************* Welcome ***************\n");
+      System.out.print("Enter Customer Item: ");
+      String item = scanner.nextLine();
 
-        System.out.print("Enter Customer Item: ");
-        String item = scanner.nextLine();
+      System.out.print("Enter Quantity: ");
+      int quantity = Integer.parseInt(scanner.nextLine());
 
-        System.out.print("Enter Quantity: ");
-        int quantity = Integer.parseInt(scanner.nextLine());
+      System.out.print("Enter Unit Price: ");
+      int unitPrice = Integer.parseInt(scanner.nextLine());
 
-        System.out.print("Enter Unit Price: ");
-        int unitPrice = Integer.parseInt(scanner.nextLine());
-
-        // Create and return PosItems instance with provided details
-        return new PosItems(item, quantity, unitPrice);
-      } else {
-        System.out.println("******** Wrong Password *************");
-      }
-    } catch (NumberFormatException e) {
-      LOGGER.severe("Invalid input for quantity or unitPrice. Please enter valid numbers.");
+      // Create and return PosItems instance with provided details
+      return new PosItems(item, quantity, unitPrice);
+    } else {
+      System.out.println("******** Wrong Password *************");
     }
 
     return null; // Return null in case of invalid input or wrong password
