@@ -9,7 +9,7 @@ public class Order {
   int initalIndex = 0;
   int[] pricess;
   int[] total;
-  Restaurant restaurant = new Restaurant();
+  RestaurantDemo restaurant = new RestaurantDemo();
   Menu app = new Menu();
   boolean keepDisplay = true;
 
@@ -41,9 +41,15 @@ public class Order {
           System.out.println();
           System.out.print("Enter Amount to Pay: ");
           int money = restaurant.scanner.nextInt();
-          money -= initialPrice;
-          System.out.println("Your Balance is......... " + money);
-          System.exit(option);
+          int balance = money - initialPrice;
+          if (money > initialPrice) {
+            money -= initialPrice;
+            System.out.println("Your Balance is......... " + balance);
+          } else {
+            System.out.println("Insufficient");
+            System.exit(option);
+          }
+
         }
         break;
 
@@ -66,9 +72,14 @@ public class Order {
           System.out.println();
           System.out.print("Enter Amount to Pay ");
           int money = restaurant.scanner.nextInt();
-          money -= initialPrice;
-          System.out.println("Your Balance is......... " + money);
-          System.exit(option);
+          if (money > initialPrice) {
+            money -= initialPrice;
+            System.out.println("Your Balance is......... " + money);
+
+          } else {
+            System.out.println("Insufficient");
+            System.exit(option);
+          }
         }
         break;
 
@@ -90,9 +101,14 @@ public class Order {
           System.out.println();
           System.out.print("Enter Amount to Pay ");
           int money = restaurant.scanner.nextInt();
-          money -= initialPrice;
-          System.out.println("Your Balance is......... " + money);
-          System.exit(option);
+          if (money > initialPrice) {
+            money -= initialPrice;
+            System.out.println("Your Balance is......... " + money);
+
+          } else {
+            System.out.println("Insufficient");
+            System.exit(option);
+          }
         }
         break;
 
@@ -114,9 +130,14 @@ public class Order {
           System.out.println();
           System.out.print("Enter Amount to Pay ");
           int money = restaurant.scanner.nextInt();
-          money -= initialPrice;
-          System.out.println("Your Balance is......... " + money);
-          System.exit(option);
+          if (money > initialPrice) {
+            money -= initialPrice;
+            System.out.println("Your Balance is......... " + money);
+
+          } else {
+            System.out.println("Insufficient");
+            System.exit(option);
+          }
         }
         break;
 
@@ -138,9 +159,14 @@ public class Order {
           System.out.println();
           System.out.print("Enter Amount to Pay ");
           int money = restaurant.scanner.nextInt();
-          money -= initialPrice;
-          System.out.println("Your Balance is......... " + money);
-          System.exit(option);
+          if (money > initialPrice) {
+            money -= initialPrice;
+            System.out.println("Your Balance is......... " + money);
+
+          } else {
+            System.out.println("Insufficient");
+            System.exit(option);
+          }
         }
         break;
 
@@ -162,9 +188,15 @@ public class Order {
           System.out.println();
           System.out.print("Enter Amount to Pay ");
           int money = restaurant.scanner.nextInt();
-          money -= initalIndex;
-          System.out.println("Your Balance is......... " + money);
-          System.exit(option);
+
+          if (money > initialPrice) {
+            money -= initialPrice;
+            System.out.println("Your Balance is......... " + money);
+
+          } else {
+            System.out.println("Insufficient");
+            System.exit(option);
+          }
         }
         break;
 

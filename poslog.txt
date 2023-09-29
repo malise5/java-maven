@@ -1,0 +1,2 @@
+2023-09-29 13:07:51 || makePayment || INFO || Change: 1000.0
+2023-09-29 13:07:51 || displayReceipt || INFO || Item: 12 | Quantity: 2 | Unit Price: 500.0
