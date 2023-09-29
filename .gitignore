@@ -4,6 +4,8 @@
 .settings/
 .externalToolBuilders/
 
+PosDataBase.txt
+
 # Intellij
 .idea/
 *.iml
@@ -28,7 +30,6 @@ wildfly-server
 
 # Log file
 *.log
-*.txt
 
 # BlueJ files
 *.ctxt
