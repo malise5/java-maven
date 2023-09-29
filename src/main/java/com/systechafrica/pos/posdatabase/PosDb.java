@@ -34,7 +34,7 @@ public class PosDb {
 
       // 1.Add the jdbc driver to pom.xml file
       // 2. Load Database Driver
-      Class.forName("com.mysql.jdbc.Driver");
+      Class.forName("com.mysql.cj.jdbc.Driver");
 
       // Setting the credentials
       String url = "jdbc:mysql://127.0.0.1:3306/javadb";
