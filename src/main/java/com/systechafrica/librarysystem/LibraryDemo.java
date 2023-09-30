@@ -12,9 +12,15 @@ public class LibraryDemo {
   private static int loginAttempts = 0;
 
   private static ArrayList<Student> students = new ArrayList<>();
+  private static ArrayList<Book> books = new ArrayList<>();
 
   public static void main(String[] args) {
+    // Create some books and students
+    books.add(new Book(1234, "The Lord of the Rings"));
+    books.add(new Book(9876, "Harry Potter and the Sorcerer's Stone"));
 
+    students.add(new Student(12345));
+    students.add(new Student(54321));
   }
 
   public boolean login() {
