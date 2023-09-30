@@ -17,7 +17,7 @@ public class LibraryDemo {
     System.out.println();
     System.out.println("*********** MAKTABA ***********");
     System.out.println();
-    System.out.print("Enter Admin password to Continue: ");
+    System.out.print("Enter Library Admin password to Continue: ");
     String enteredPassword = scanner.nextLine();
 
     if (enteredPassword.equals(DEFAULT_PASSWORD)) {
