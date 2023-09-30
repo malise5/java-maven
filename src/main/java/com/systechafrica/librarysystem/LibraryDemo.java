@@ -123,4 +123,29 @@ public class LibraryDemo {
     }
   }
 
+  private static void returnBook() {
+    try {
+      // we have to check the registartion number of the student
+      System.out.println("Enter Registration Number: ");
+      int regNo = Integer.parseInt(scanner.nextLine());
+
+      // find the student number if it exists
+      Student student = findStudentRegNo(regNo);
+
+      if (student == null) {
+        System.out.println("Student not Found");
+      }
+
+      System.out.println("Enter ISBN number of the book");
+      int isbn = Integer.parseInt(scanner.nextLine());
+
+      // This line calls the returnBook method of the Student class to handle the
+      // return of the book with the specified ISBN for the given student.
+      student.returnBook(isbn);
+
+    } catch (Exception e) {
+      System.out.println("Invalid input. Please enter a valid integer.");
+    }
+  }
+
 }
