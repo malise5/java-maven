@@ -30,12 +30,13 @@ public class LibraryDemo {
 
     // Create some books and students
     books.add(new Book(1234, "Book1"));
-    books.add(new Book(4567, "Book2"));
     students.add(new Student(100));
-    students.add(new Student(200));
 
     System.out.println();
     System.out.println("============ SYSTECH Library Management System: ===========");
+    System.out.println();
+    System.out.println("Use this Student infro ");
+    System.out.println("Student => : RefNo: 100 ");
     System.out.println();
 
     if (login()) {
@@ -128,10 +129,10 @@ public class LibraryDemo {
       // from the student class we have a method for borrowing the book
       student.borrowBook(book);
 
-      System.out.println("Do you want to lend another book? (Y/N): ");
+      System.out.print("Do you want to lend another book? (Y/N): ");
       String answer = scanner.nextLine();
       if (answer.equalsIgnoreCase("N")) {
-        displayMenu();
+        viewBorrowedBook();
       }
 
     } catch (NumberFormatException e) {
@@ -164,13 +165,15 @@ public class LibraryDemo {
       } else {
         // display the books
 
+        System.out.println("=================Borrowed Books are: =====================");
+        System.out.println();
         for (Book book : borrowedBooks) {
-          System.out.println("=================Borrowed Books are: =====================");
-          System.out.println();
+
           System.out.println("Isbn: " + book.getIsbn() + " " + "Title: " + book.getTitle());
-          System.out.println();
-          System.out.println("===========================================================");
+
         }
+        System.out.println();
+        System.out.println("=======================================");
 
       }
 
