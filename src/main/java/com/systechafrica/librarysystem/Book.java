@@ -2,19 +2,19 @@ package com.systechafrica.librarysystem;
 
 public class Book {
 
-  private String isbn;
+  private int isbn;
   private String title;
 
-  public Book(String isbn, String title) {
+  public Book(int isbn, String title) {
     this.isbn = isbn;
     this.title = title;
   }
 
-  public String getIsbn() {
+  public int getIsbn() {
     return isbn;
   }
 
-  public void setIsbn(String isbn) {
+  public void setIsbn(int isbn) {
     this.isbn = isbn;
   }
 
