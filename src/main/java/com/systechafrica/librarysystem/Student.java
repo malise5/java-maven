@@ -33,14 +33,15 @@ public class Student {
     borrowedBooks.add(book);
   }
 
-  public boolean returnBook(int isbn) {
+  public void returnBook(int isbn) {
     for (Book book : borrowedBooks) {
       if (book.getIsbn() == isbn) {
         borrowedBooks.remove(book);
-        return true;
+        System.out.println("Book returned successfully.");
+      } else {
+        System.out.println("Book with ISBN " + isbn + " not found in borrowed books.");
       }
     }
-    return false;
   }
 
 }
