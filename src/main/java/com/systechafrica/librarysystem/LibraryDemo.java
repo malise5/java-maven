@@ -13,6 +13,10 @@ public class LibraryDemo {
 
   private static ArrayList<Student> students = new ArrayList<>();
 
+  public static void main(String[] args) {
+
+  }
+
   public boolean login() {
     System.out.println();
     System.out.println("*********** MAKTABA ***********");
@@ -25,7 +29,7 @@ public class LibraryDemo {
     }
 
     loginAttempts++;
-    System.out.println("Incorrect password. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
+    System.out.println("Incorrect password. Please try again. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
 
     if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
       System.out.println("Maximum login attempts reached. Exiting.");
