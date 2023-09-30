@@ -21,6 +21,37 @@ public class LibraryDemo {
     books.add(new Book(9876, "Harry Potter and the Sorcerer's Stone"));
     students.add(new Student(12345));
     students.add(new Student(54321));
+
+    if (login()) {
+      boolean keepDisplay = true;
+      while (keepDisplay) {
+        displayMenu();
+        System.out.print("Enter an Option: ");
+        int option = Integer.parseInt(scanner.nextLine());
+
+        try {
+          switch (option) {
+            case 1:
+              borrowBook();
+              break;
+            case 2:
+              viewBorrowedBook();
+              break;
+            case 3:
+              returnBook();
+              break;
+            case 4:
+              System.out.println("Logging out. GoodBye!!! ");
+              keepDisplay = false;
+            default:
+              System.out.println("Invalid choice. Please try again.");
+              break;
+          }
+        } catch (InputMismatchException e) {
+          System.out.println("Invalid input. Please enter a number.");
+        }
+      }
+    }
   }
 
   private static boolean login() {
@@ -44,12 +75,11 @@ public class LibraryDemo {
   }
 
   private static void displayMenu() {
-    System.out.println("SYSTECH Library Management System::");
+    System.out.println("============ SYSTECH Library Management System: ===========");
     System.out.println("1. Borrow a Book");
     System.out.println("2. View borrowed books");
     System.out.println("3. Return a book");
     System.out.println("4. Quit");
-    System.out.println("Enter your choice: ");
   }
 
   private static void borrowBook() {
@@ -85,18 +115,6 @@ public class LibraryDemo {
     } catch (InputMismatchException e) {
       System.out.println("Invalid input. Please enter a valid integer. => " + e.getMessage());
     }
-  }
-
-  // The findStudentRegNo method is supposed to search through the
-  // list of students and return the Student object that matches the provided
-  // registration number.
-  private static Student findStudentRegNo(int registrationNumber) {
-    for (Student student : students) {
-      if (student.getRegistrationNumber() == registrationNumber) {
-        return student;
-      }
-    }
-    return null;
   }
 
   private static void viewBorrowedBook() {
@@ -146,6 +164,18 @@ public class LibraryDemo {
     } catch (Exception e) {
       System.out.println("Invalid input. Please enter a valid integer.");
     }
+  }
+
+  // The findStudentRegNo method is supposed to search through the
+  // list of students and return the Student object that matches the provided
+  // registration number.
+  private static Student findStudentRegNo(int registrationNumber) {
+    for (Student student : students) {
+      if (student.getRegistrationNumber() == registrationNumber) {
+        return student;
+      }
+    }
+    return null;
   }
 
 }
