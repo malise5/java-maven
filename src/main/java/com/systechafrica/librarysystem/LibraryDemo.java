@@ -105,7 +105,7 @@ public class LibraryDemo {
 
   private static void borrowBook() {
     try {
-      System.out.println("Enter Student registration Number: ");
+      System.out.print("Enter Student registration Number: ");
       int regNo = Integer.parseInt(scanner.nextLine());
 
       // Find the student with the given registration number
@@ -163,14 +163,14 @@ public class LibraryDemo {
         LOGGER.info("No Borrows borrowed books");
       } else {
         // display the books
-        System.out.println("=======================================");
-        System.out.println();
+
         for (Book book : borrowedBooks) {
-          System.out.println("Borrowed Books are? ");
+          System.out.println("=================Borrowed Books are: =====================");
+          System.out.println();
           System.out.println("Isbn: " + book.getIsbn() + " " + "Title: " + book.getTitle());
+          System.out.println();
+          System.out.println("===========================================================");
         }
-        System.out.println();
-        System.out.println("=======================================");
 
       }
 
