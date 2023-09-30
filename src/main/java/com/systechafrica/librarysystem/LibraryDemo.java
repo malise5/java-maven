@@ -1,10 +1,16 @@
 package com.systechafrica.librarysystem;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+
+import com.systechafrica.pos.logger.CustomFormatter;
 
 public class LibraryDemo {
+  private static final Logger LOGGER = Logger.getLogger(LibraryDemo.class.getName());
 
   private static final String DEFAULT_PASSWORD = "Admin123";
   private static final int MAX_LOGIN_ATTEMPTS = 3;
@@ -15,12 +21,18 @@ public class LibraryDemo {
   private static ArrayList<Student> students = new ArrayList<>();
   private static ArrayList<Book> books = new ArrayList<>();
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws SecurityException, IOException {
+
+    FileHandler fh = new FileHandler("library.txt");
+    CustomFormatter formatter = new CustomFormatter();
+    LOGGER.addHandler(fh);
+    fh.setFormatter(formatter);
+
     // Create some books and students
-    books.add(new Book(1234, "The Lord of the Rings"));
-    books.add(new Book(9876, "Harry Potter and the Sorcerer's Stone"));
-    students.add(new Student(12345));
-    students.add(new Student(54321));
+    books.add(new Book(1234, "Book1"));
+    books.add(new Book(4567, "Book2"));
+    students.add(new Student(100));
+    students.add(new Student(200));
 
     if (login()) {
       boolean keepDisplay = true;
@@ -48,6 +60,7 @@ public class LibraryDemo {
               break;
           }
         } catch (InputMismatchException e) {
+          LOGGER.warning("Invalid input. Please enter a number.");
           System.out.println("Invalid input. Please enter a number.");
         }
       }
@@ -55,6 +68,7 @@ public class LibraryDemo {
   }
 
   private static boolean login() {
+    System.out.println("============ SYSTECH Library Management System: ===========");
     System.out.println();
     System.out.print("Enter Library Admin password to Continue: ");
     String enteredPassword = scanner.nextLine();
@@ -75,11 +89,12 @@ public class LibraryDemo {
   }
 
   private static void displayMenu() {
-    System.out.println("============ SYSTECH Library Management System: ===========");
+    System.out.println();
     System.out.println("1. Borrow a Book");
     System.out.println("2. View borrowed books");
     System.out.println("3. Return a book");
     System.out.println("4. Quit");
+    System.out.println();
   }
 
   private static void borrowBook() {
@@ -90,7 +105,8 @@ public class LibraryDemo {
       // Find the student with the given registration number
       Student student = findStudentRegNo(regNo);
       if (student == null) {
-        System.out.println("Student not found");
+        LOGGER.severe("Student not found");
+        borrowBook();
       }
 
       // reading the isbn number of the books
@@ -126,6 +142,7 @@ public class LibraryDemo {
       Student student = findStudentRegNo(regNo);
       if (student == null) {
         System.out.println("Student not found");
+        LOGGER.severe("Student not found");
       }
 
       // getting borrowed books
