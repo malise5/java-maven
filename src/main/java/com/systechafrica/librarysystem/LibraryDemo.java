@@ -99,4 +99,28 @@ public class LibraryDemo {
     return null;
   }
 
+  private static void viewBorrowedBook() {
+    try {
+      System.out.println("Enter STudent Registration: ");
+      int regNo = Integer.parseInt(scanner.nextLine());
+
+      // finding the student so that we can locate the borrowed boo
+      Student student = findStudentRegNo(regNo);
+      if (student == null) {
+        System.out.println("Student not found");
+      }
+
+      // getting borrowed books
+      ArrayList<Book> borrowedBooks = student.getBorrowedBooks();
+
+      // display the books
+      for (Book book : borrowedBooks) {
+        System.out.println("Borrowed Books are? ");
+        System.out.println("Isbn: " + book.getIsbn() + " " + "Title: " + book.getTitle());
+      }
+    } catch (Exception e) {
+      System.out.println("Invalid input. Please enter a valid integer." + e.getMessage());
+    }
+  }
+
 }
