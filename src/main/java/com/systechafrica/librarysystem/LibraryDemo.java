@@ -34,6 +34,10 @@ public class LibraryDemo {
     students.add(new Student(100));
     students.add(new Student(200));
 
+    System.out.println();
+    System.out.println("============ SYSTECH Library Management System: ===========");
+    System.out.println();
+
     if (login()) {
       boolean keepDisplay = true;
       while (keepDisplay) {
@@ -61,14 +65,14 @@ public class LibraryDemo {
           }
         } catch (InputMismatchException e) {
           LOGGER.warning("Invalid input. Please enter a number.");
-          System.out.println("Invalid input. Please enter a number.");
+          // System.out.println("Invalid input. Please enter a number.");
         }
       }
     }
   }
 
   private static boolean login() {
-    System.out.println("============ SYSTECH Library Management System: ===========");
+
     System.out.println();
     System.out.print("Enter Library Admin password to Continue: ");
     String enteredPassword = scanner.nextLine();
@@ -78,7 +82,9 @@ public class LibraryDemo {
     }
 
     loginAttempts++;
-    System.out.println("Incorrect password. Please try again. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
+    LOGGER.warning("Incorrect password. Please try again. Attempts left: " + (MAX_LOGIN_ATTEMPTS - loginAttempts));
+    // System.out.println("Incorrect password. Please try again. Attempts left: " +
+    // (MAX_LOGIN_ATTEMPTS - loginAttempts));
 
     if (loginAttempts >= MAX_LOGIN_ATTEMPTS) {
       System.out.println("Maximum login attempts reached. Exiting.");
@@ -110,10 +116,10 @@ public class LibraryDemo {
       }
 
       // reading the isbn number of the books
-      System.out.println("Enter ISBN number: ");
+      System.out.print("Enter ISBN number: ");
       int isbn = Integer.parseInt(scanner.nextLine());
 
-      System.out.println("ENter book title: ");
+      System.out.print("Enter book title: ");
       String title = scanner.nextLine();
 
       // creating the book that is being borrowed
@@ -128,8 +134,13 @@ public class LibraryDemo {
         displayMenu();
       }
 
-    } catch (InputMismatchException e) {
+    } catch (NumberFormatException e) {
       System.out.println("Invalid input. Please enter a valid integer. => " + e.getMessage());
+    } catch (NullPointerException e) {
+      LOGGER.warning("A NullPointerException occurred: The object being accessed is null. Details: " + e.getMessage());
+    } catch (InputMismatchException e) {
+      LOGGER.info(
+          "A NumberFormatException occurred: The input provided is not a valid number. Details: " + e.getMessage());
     }
   }
 
@@ -148,13 +159,28 @@ public class LibraryDemo {
       // getting borrowed books
       ArrayList<Book> borrowedBooks = student.getBorrowedBooks();
 
-      // display the books
-      for (Book book : borrowedBooks) {
-        System.out.println("Borrowed Books are? ");
-        System.out.println("Isbn: " + book.getIsbn() + " " + "Title: " + book.getTitle());
+      if (borrowedBooks == null) {
+        LOGGER.info("No Borrows borrowed books");
+      } else {
+        // display the books
+        System.out.println("=======================================");
+        System.out.println();
+        for (Book book : borrowedBooks) {
+          System.out.println("Borrowed Books are? ");
+          System.out.println("Isbn: " + book.getIsbn() + " " + "Title: " + book.getTitle());
+        }
+        System.out.println();
+        System.out.println("=======================================");
+
       }
-    } catch (Exception e) {
+
+    } catch (InputMismatchException e) {
       System.out.println("Invalid input. Please enter a valid integer." + e.getMessage());
+    } catch (NullPointerException e) {
+      LOGGER.warning("A NullPointerException occurred: The object being accessed is null. Details: " + e.getMessage());
+    } catch (NumberFormatException e) {
+      LOGGER.info(
+          "A NumberFormatException occurred: The input provided is not a valid number. Details: " + e.getMessage());
     }
   }
 
@@ -178,8 +204,13 @@ public class LibraryDemo {
       // return of the book with the specified ISBN for the given student.
       student.returnBook(isbn);
 
-    } catch (Exception e) {
+    } catch (InputMismatchException e) {
       System.out.println("Invalid input. Please enter a valid integer.");
+    } catch (NullPointerException e) {
+      LOGGER.warning("A NullPointerException occurred: The object being accessed is null. Details: " + e.getMessage());
+    } catch (NumberFormatException e) {
+      LOGGER.info(
+          "A NumberFormatException occurred: The input provided is not a valid number. Details: " + e.getMessage());
     }
   }
 
