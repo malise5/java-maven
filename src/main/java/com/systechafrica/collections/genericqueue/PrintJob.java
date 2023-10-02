@@ -15,4 +15,9 @@ public class PrintJob {
     this.name = name;
   }
 
+  @Override
+  public String toString() {
+    return "PrintJob [name=" + name + "]";
+  }
+
 }
